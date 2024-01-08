@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
+import { inicisesio } from './iniciar-sessio-perez';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    redirectTo:'ini', pathMatch: 'full'
   },
   {
     path: 'game',
@@ -19,7 +20,8 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'home'
-  }
+  },
+  {path: 'ini', component: inicisesio}
 ];
 
 @NgModule({
